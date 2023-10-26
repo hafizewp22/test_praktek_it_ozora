@@ -11,7 +11,7 @@
         }
     </style>
 
-    <div class="p-2 fs-2 font-weight-bold text-center">Data Barang - Barang</div>
+    <div class="p-2 fs-2 font-weight-bold text-center">Data Barang</div>
 
     <div class="p-5">
         @if (session('status'))

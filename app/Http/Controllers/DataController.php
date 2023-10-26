@@ -9,9 +9,9 @@ class DataController extends Controller
 {
     public function index(Request $request)
     {
-        $datas = Data::latest('created_at')->simplePaginate(10);
+        $datas = Data::latest('created_at')->simplePaginate(5);
         $search_query = $request->query('SearchData');
-        $dataSearch = Data::orWhere('nama_barang', "LIKE", "%$search_query%")->latest('created_at')->simplePaginate(10);
+        $dataSearch = Data::orWhere('nama_barang', "LIKE", "%$search_query%")->latest('created_at')->simplePaginate(5);
         return view('index', compact('datas', 'dataSearch'));
     }
 
@@ -88,7 +88,7 @@ class DataController extends Controller
 
     public function SearchData(Request $request){
         $search_query = $request->query('SearchData');
-        $datas = Data::orWhere('nama_barang', "LIKE", "%$search_query%")->latest('created_at')->simplePaginate(10);
+        $datas = Data::orWhere('nama_barang', "LIKE", "%$search_query%")->latest('created_at')->simplePaginate(5);
         return view('index', compact('datas', 'datas'));
     }
 }

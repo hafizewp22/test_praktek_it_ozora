@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Data</title>
+    <title>Data - Toko: Online</title>
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap-icons.css') }}">
@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container-fluid">
-        <a class="navbar-brand text-white" href="/">Data Toko Barang</a>
+        <a class="navbar-brand text-white" href="/">Toko: Online</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
