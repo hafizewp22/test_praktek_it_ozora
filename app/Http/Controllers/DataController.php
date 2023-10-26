@@ -9,7 +9,7 @@ class DataController extends Controller
 {
     public function index(Request $request)
     {
-        $datas = Data::all();
+        $datas = Data::simplePaginate(10);
         $search_query = $request->query('SearchData');
         $dataSearch = Data::orWhere('nama_barang', "LIKE", "%$search_query%")->get();
         return view('index', compact('datas', 'dataSearch'));
@@ -88,7 +88,7 @@ class DataController extends Controller
 
     public function SearchData(Request $request){
         $search_query = $request->query('SearchData');
-        $datas = Data::orWhere('nama_barang', "LIKE", "%$search_query%")->get();
+        $datas = Data::orWhere('nama_barang', "LIKE", "%$search_query%")->simplePaginate(10);
         return view('index', compact('datas', 'datas'));
     }
 }

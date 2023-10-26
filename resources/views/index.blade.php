@@ -33,7 +33,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($datas as $data)
+                @forelse ($datas as $data)
                     <tr>
                         <th class="align-middle" scope="row">{{ $loop->iteration }}</th>
                         <td>
@@ -139,8 +139,15 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @empty
+                    <tbody>
+                        <tr>
+                            <th scope="col" colspan = "7">No data</th>
+                        </tr>
+                     </tbody>
+                @endforelse
             </tbody>
         </table>
+        <h4 class="text-center">{{ $datas->links() }}</h4>
     </div>
 @endsection
