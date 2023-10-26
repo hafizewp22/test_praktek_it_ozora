@@ -11,14 +11,14 @@
         }
     </style>
 
+    <div class="p-2 fs-2 font-weight-bold text-center">Data Barang - Barang</div>
+
     <div class="p-5">
-        <div class="mt-5">
-            @if (session('status'))
-                <div class="alert alert-success">
-                    {{ session('status') }}
-                </div>
-            @endif
-        </div>
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
 
         <table class="table">
             <thead>

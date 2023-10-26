@@ -22,3 +22,5 @@ Route::get('/', [DataController::class, 'index']);
 Route::post('/input-data', [DataController::class, 'UploadData'])->name('input.data');
 Route::post('/edit-data', [DataController::class, 'UpdateData'])->name('update.data');
 Route::get('/delete-data/{id}', [DataController::class, 'DeleteData']);
+Route::get('/search-data', [DataController::class, 'SearchData'])->name('search.data');
+

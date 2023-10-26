@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->text('photo');
             $table->string('nama_barang');
-            $table->decimal('harga_beli', 2);
-            $table->decimal('harga_jual', 2);
+            $table->integer('harga_beli');
+            $table->integer('harga_jual');
             $table->integer('stok');
             $table->timestamps();
         });

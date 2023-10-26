@@ -25,6 +25,12 @@
                         data-bs-target="#uploadModal">Add Data</a>
                 </div>
             </div>
+            <div class="d-flex">
+                <form method="GET" action="{{ route('search.data') }}" class="d-flex">
+                    <input id="SearchData" name="SearchData" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-secondary" type="submit">Search</button>
+                </form>
+            </div>
         </nav>
     </div>
 

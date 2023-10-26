@@ -7,10 +7,12 @@ use Illuminate\Http\Request;
 
 class DataController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $datas = Data::all();
-        return view('index', compact('datas'));
+        $search_query = $request->query('SearchData');
+        $dataSearch = Data::orWhere('nama_barang', "LIKE", "%$search_query%")->get();
+        return view('index', compact('datas', 'dataSearch'));
     }
 
     public function UploadData(Request $request)
@@ -82,5 +84,11 @@ class DataController extends Controller
         $data->delete();
 
         return redirect('/')->with('status', 'Data deleted successfully');
+    }
+
+    public function SearchData(Request $request){
+        $search_query = $request->query('SearchData');
+        $datas = Data::orWhere('nama_barang', "LIKE", "%$search_query%")->get();
+        return view('index', compact('datas', 'datas'));
     }
 }
