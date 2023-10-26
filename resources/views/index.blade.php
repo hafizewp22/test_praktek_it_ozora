@@ -44,10 +44,8 @@
                         <td class="align-middle">Rp. {{ number_format($data->harga_jual, 0, ',', '.') }}</td>
                         <td class="align-middle">{{ $data->stok }}</td>
                         <td class="align-middle">
-                            <a class="cursor-pointer" href="#" data-bs-toggle="modal"
-                                data-bs-target="#updateModal-{{ $data->id }}">Edit</a>
-                            <a class="cursor-pointer" href="#" data-bs-toggle="modal"
-                                data-bs-target="#deleteModal-{{ $data->id }}">Delete</a>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal-{{ $data->id }}">Edit</button>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $data->id }}">Delete</button>
                         </td>
                     </tr>
 
